@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="styles2.css" type="text/css" rel="stylesheet" />
+
+    <title>Registration Form</title>
+  
+  </head>
+  <body>
+      <div class="registeration-form">
+          <h1>Registration Form</h1>
+          <form action="#" method="post" id="kayit-ol">
+              <p>Full Name</p>
+              <input type="text" name="name" id="full-name" placeholder="Full Name">
+              <p>Last Name</p>
+              <input type="text" name="username" id="last-name" placeholder="Last Name">
+              <p>E-mail</p>
+              <input type="email" name="email" id="e-mail" placeholder="E-mail">
+              <p>Password</p>
+              <input type="password" name="password" id="password" placeholder="Password">
+              <button type="submit">Submit</button>
+
+
+          </form>
+          <div id="request-answer">
+
+          </div>
+      </div>
+      <style>
+        body{background-image: url(me2.jpeg);
+        background-size: cover;
+        color: black;
+        }
+        
+        </style>
+  <script>
+    var form = document.getElementById("kayit-ol");
+    form.addEventListener("submit", async(event)=>{
+      event.preventDefault();
+      //alert("form gönderildi");
+      let fullname = document.getElementById("full-name");
+      let lastname = document.getElementById("last-name");
+      let email = document.getElementById("e-mail");
+      let password = document.getElementById("password");
+      if(fullname.value && lastname.value && email.value && password.value){
+        const url = "http://localhost:3000/kayitol";
+        let data = {
+          fullname : fullname.value,
+          lastname : lastname.value,
+          email : email.value,
+          password : password.value
+        };
+        var request = new Request(url,{
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: { "Content-type": "application/json; charset=UTF-8"}
+        });
+
+        let response = await fetch(request);
+        //console.log(response);
+        if(response.ok){
+          //let id = await response.json();
+          var result = document.getElementById("request-answer");
+          result.innerHTML = "Registration is successfull and you are directing to login page.";
+          setTimeout(() => {
+            window.location.href="login.html";
+          }, 3000);
+        }else{
+          var result = document.getElementById("request-answer");
+          result.innerHTML = "Registration is unseccssfull.Please try again.";
+        }
+      }
+    });
+  </script>
+  
+
+</body>
+</html>

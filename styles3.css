@@ -1,0 +1,88 @@
+.product-header {
+  text-align: center;
+  background-color: lavender;
+}
+.product-header .breadcrumb {
+  font-size: 34px;
+  color: brown;
+}
+.product-header .breadcrumb span {
+  color: brown;
+}
+
+.product-header h1 {
+  color: coral;
+  margin: 10px;
+  font-size: 55px;
+}
+
+.product-header h3 {
+  font-size: 35px;
+  color: coral;
+}
+
+.product-header i {
+  color: black;
+  font-size: 30px;
+  display: inline-block;
+}
+
+.product-body {
+  margin-top: 40px;
+}
+.product-photo {
+  background-size: cover;
+  min-height: 400px;
+}
+
+.btn-main {
+  color: rgb(241, 241, 241);
+  background-color: coral;
+  margin: 10px;
+  margin-left: -5px;
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.fab {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 2px double white;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab:hover {
+  background-color: coral;
+  border: 2px double coral;
+  opacity: 0.9;
+  transform: rotate(360deg);
+  box-shadow: 2px 2px 24px #fff;
+  color: white;
+}
+
+.toast {
+  padding: 1rem;
+  background-color: coral;
+  box-shadow: 2px 2px 24px #fff;
+}
+
+.toast button {
+  color: white;
+}
+
+.toast button i {
+  height: 1rem;
+}

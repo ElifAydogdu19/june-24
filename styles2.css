@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.registeration-form {
+  position: absolute;
+  top: 3%;
+  left: 35%;
+}
+.registeration-form h1 {
+  font-size: 34px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 18px 0;
+}
+.registeration-form p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.registeration-form input {
+  font-size: 16px;
+  padding: 5px 10px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.registeration-form button {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 8px 25px;
+  border-radius: 3px;
+  background-color: rgba(155, 122, 158, 0.993);
+}
